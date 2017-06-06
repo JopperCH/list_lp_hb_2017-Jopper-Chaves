@@ -1,0 +1,2 @@
+código para baixar todas as imgs de um site (TESTE)
+wget -r -A jpeg,jpg,bmp,gif,png http://ufrr.br
