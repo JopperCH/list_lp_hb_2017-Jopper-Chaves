@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main()
+{
+char nomes[15][20], aux[20];
+int N, i, j;
+
+printf("Digite o numero de nomes na lista: ");
+	scanf("%d", &N);
+printf("Digite os nomes: ");
+for(i=0; i<N; i++)
+	scanf("%s", nomes[i]);
+
+for(i=0; i<N; i++) {
+	for(j=0; j<N; j++) {
+		if(strcmp(nomes[i], nomes[j]) < 0) {
+		strcpy(aux, nomes[i]);
+		strcpy(nomes[i], nomes[j]);
+		strcpy(nomes[j], aux);
+		}
+	}
+}
+printf("\n");
+for(i=0; i<2; i++)
+	printf("%s\n", nomes[i]);
+return 0;
+}
